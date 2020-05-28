@@ -1,0 +1,31 @@
+{
+  "name": "afinal",
+  "version": "1.0.0",
+  "description": "Final Project",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CS-Assignments/AFinal.git"
+  },
+  "keywords": [
+    "Express",
+    "HTTP",
+    "Final",
+    "CS290"
+  ],
+  "author": "Team12",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CS-Assignments/AFinal/issues"
+  },
+  "homepage": "https://github.com/CS-Assignments/AFinal#readme"
+}

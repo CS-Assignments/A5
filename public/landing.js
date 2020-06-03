@@ -2,13 +2,15 @@ function loginCheck() {
   if((loginUsername.value == "") || (loginPassword.value == "")) {
     alert("Invalid Username or Password");
   } else {
+    location.pathname = "/checking/" + loginUsername.value + "_" + loginPassword.value;
+    /*
     for (i = 0; i < userAccounts.length; i++) {
       if(loginUsername.value.toString() == userAccounts[i][0] && loginPassword.value.toString() == userAccounts[i][1]) {
 	location.pathname = "/mainShop/" + i;
         console.log("enter correct account");
       }
     }
-    console.log("Error wrong username or password");
+    */
   }
 }
 

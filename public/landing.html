@@ -7,13 +7,37 @@
 
     <link rel="stylesheet" href="/style.css" media="screen">
 
-    <script src="/index.js" charset="utf-8" defer></script>
+    <script src="/landing.js" charset="utf-8" defer></script>
 
   </head>
 
   <body>
 
-  <h1>Some Text</h1>
+  <h1>Welcome to the CS290 Shop</h1>
+  <p>Login or Continue as a guest</p>
+
+  <div id="login-modal">
+    <div class="modal-content">
+      
+      <div class="login-body">
+        <div class="login-input">
+<!--	  <p>Username</p>	-->
+	  <label for="login-username-input">Username</label>
+	  <textarea id="login-username-input"></textarea>
+	</div>
+	<div class="login-input">
+<!--	  <p>Password</p>	-->
+	  <label for="login-password-input">Password</label>
+	  <textarea id="login-password-input"></textarea>
+	</div>
+      </div>
+
+      <div class="login-footer">
+        <button type="button" class="login-continue-button">Login</button>
+        <button type="button" class="login-guest-button">Guest</button>
+      </div>
+    </div>
+  </div>
 
   </body>
 

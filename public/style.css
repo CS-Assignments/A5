@@ -1,0 +1,55 @@
+/*
+* CSS for Landing Page
+*/
+div.head-info {
+  text-align: center;
+  margin-top: 150px;
+}
+
+div.head-title {
+  display: inline;
+}
+
+#login-username-input {
+  resize: none;
+}
+
+#login-password-input {
+  resize: none;
+}
+
+#login-modal {
+  margin: auto;
+  align: center;
+  border: solid;
+  width: 200px;
+  padding: 10px;
+}
+
+/*
+* CSS for mainShop and other pages
+*/
+.shop-item {
+  margin: auto;
+  width: 300px;
+  padding: 10px;
+  border: solid;
+}
+
+.navitem {
+  display: inline-block;
+}
+
+.navbar-cart {
+  float: right;
+  margin-right: 20px;
+}
+
+#navbar-shopping-cart-button {
+  height: 40px;
+  width: 40px;
+  font-size: 20px;
+  border-radius: 5px;
+  color: black;
+}
+

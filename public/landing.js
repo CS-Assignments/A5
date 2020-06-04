@@ -3,14 +3,6 @@ function loginCheck() {
     alert("Invalid Username or Password");
   } else {
     location.pathname = "/checking/" + loginUsername.value + "_" + loginPassword.value;
-    /*
-    for (i = 0; i < userAccounts.length; i++) {
-      if(loginUsername.value.toString() == userAccounts[i][0] && loginPassword.value.toString() == userAccounts[i][1]) {
-	location.pathname = "/mainShop/" + i;
-        console.log("enter correct account");
-      }
-    }
-    */
   }
 }
 
@@ -18,13 +10,6 @@ function continueGuest() {
   console.log("current path:", location.pathname);
   location.pathname = "/mainShop.html"
 }
-
-let userAccounts = [
-  ["Johnny", "appl3"],
-  ["Jack", "121"],
-  ["Hessey", "I<3CS"],
-  ["Yay", "happy"]
-];
 
 var loginButton = document.getElementsByClassName("login-continue-button");
 var guestButton = document.getElementsByClassName("login-guest-button");

@@ -2,23 +2,28 @@
 * CSS for Landing Page
 */
 div.head-info {
+  font-family: verdana;
   text-align: center;
   margin-top: 150px;
 }
 
 div.head-title {
+  font-family: verdana
   display: inline;
 }
 
 #login-username-input {
+  font-family: verdana;
   resize: none;
 }
 
 #login-password-input {
+  font-family: verdana;
   resize: none;
 }
 
 #login-modal {
+  font-family: verdana;
   margin: auto;
   align: center;
   border: solid;
@@ -29,7 +34,30 @@ div.head-title {
 /*
 * CSS for mainShop and other pages
 */
+
+h1 {
+  font-family: verdana;
+}
+
+h1 a:link {
+  text-decoration: none;
+
+}
+
+h1 a:hover {
+  color: olivedrab;
+}
+
+h1 a:visited {
+  text-decoration: none;
+}
+
+h1 a:active {
+  text-decoration: none;
+}
+
 .shop-item {
+  font-family: verdana;
   margin: auto;
   width: 300px;
   padding: 10px;
@@ -37,6 +65,7 @@ div.head-title {
 }
 
 .navitem {
+  font-family: verdana;
   display: inline-block;
 }
 
@@ -52,4 +81,3 @@ div.head-title {
   border-radius: 5px;
   color: black;
 }
-

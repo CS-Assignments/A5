@@ -30,7 +30,7 @@ function checkCredentials(username){
         location.pathname = "/mainShop.html";
       }
       else if (event.target.status === 204) {
-        alert("User Does Not Exist");
+        alert("204");
       }
     });
 

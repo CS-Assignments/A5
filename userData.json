@@ -1,5 +1,8 @@
-[
-  ["Johnny", "appl3"],
-  ["Hello", "there"],
-  ["Hess", "i<3CS"]
-]
+{
+	"Hello": {
+		"cart": ["item1", "item2"]
+	},
+	"Robin": {
+		"cart": ["item5", "item3"]
+	}
+}

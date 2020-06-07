@@ -1,5 +1,6 @@
 var path = require('path');
 var express = require('express');
+var bodyParser = require('body-parser');
 var userData = require('./userData');
 
 var app = express();
@@ -7,6 +8,7 @@ var port = process.env.PORT || 3000;
 
 var userNum = -1;
 
+app.use(bodyParser.json());
 app.use(express.static('public'));
 
 app.get('/', function (req, res, next) {
@@ -33,6 +35,15 @@ app.get('/checking/:credentials', function (req, res, next) {
 	res.status(200).sendFile(path.join(__dirname, 'public', 'landing.html'))
     } else {
 	res.status(200).sendFile(path.join(__dirname, 'public', 'mainShop.html'));
+    }
+});
+
+app.post('/login', function(req,res) {
+    if(userData[req.body.name]){
+        res.status(200).sendFile(__dirname + '/public/mainShop.html');
+    }
+    else{
+        res.status(204).send("User Does Not Exist");
     }
 });
 

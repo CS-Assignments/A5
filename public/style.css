@@ -4,10 +4,16 @@
 div.head-info {
   text-align: center;
   margin-top: 150px;
+  font-family: verdana;
 }
 
 div.head-title {
   display: inline;
+  font-family: verdana;
+}
+
+label {
+  font-family: verdana;
 }
 
 #login-username-input {
@@ -29,6 +35,21 @@ div.head-title {
 /*
 * CSS for mainShop and other pages
 */
+
+h1 {
+  font-family: verdana;
+}
+
+h1 a:link {
+  text-decoration: none;
+}
+
+h1 a:hover {
+  color: olive;
+}
+
+
+
 .shop-item {
   margin: auto;
   width: 300px;
@@ -39,6 +60,16 @@ div.head-title {
 .navitem {
   display: inline-block;
 }
+
+.item-info {
+  font-family: verdana;
+}
+
+.shop-item-image {
+  margin-left: 50px;
+
+}
+
 
 .navbar-cart {
   float: right;
@@ -52,4 +83,3 @@ div.head-title {
   border-radius: 5px;
   color: black;
 }
-

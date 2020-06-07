@@ -4,10 +4,15 @@
 div.head-info {
   text-align: center;
   margin-top: 150px;
+  font-family: verdana;
 }
 
 div.head-title {
   display: inline;
+}
+
+label {
+  font-family: verdana;
 }
 
 #login-username-input {
@@ -36,6 +41,18 @@ div.head-title {
   border: solid;
 }
 
+h1 {
+  font-family: verdana;
+}
+
+h1 a:link {
+  text-decoration: none;
+}
+
+h1 a:hover {
+  color: olive;
+}
+
 .navitem {
   display: inline-block;
 }
@@ -45,6 +62,14 @@ div.head-title {
   margin-right: 20px;
 }
 
+.item-info {
+  font-family: verdana;
+}
+
+.image-container {
+  margin-left: 55px;
+}
+
 #navbar-shopping-cart-button {
   height: 40px;
   width: 40px;
@@ -52,4 +77,3 @@ div.head-title {
   border-radius: 5px;
   color: black;
 }
-

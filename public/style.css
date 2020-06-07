@@ -31,7 +31,6 @@ label {
 
 #login-modal {
   margin: auto;
-  align: center;
   border: solid;
   width: 200px;
   padding: 10px;
@@ -40,9 +39,16 @@ label {
 /*
 * CSS for mainShop and other pages
 */
+.item-container {
+  margin-left: 75px;
+  margin-right: 75px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .shop-item {
-  margin: auto;
-  width: 300px;
+  margin: 10px;
+  width: 250px;
   padding: 10px;
   border: solid;
 }
@@ -97,10 +103,11 @@ h1{
   /* font-family: verdana; */
 }
 
+/*
 .image-container {
   margin-left: 55px;
 }
-
+*/
 #navbar-shopping-cart-button {
   height: 40px;
   width: 40px;

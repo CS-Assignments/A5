@@ -1,0 +1,42 @@
+[
+  {
+    "url": "http://placekitten.com/200/300",
+    "caption": "CSMajor2020",
+    "price": "$200"
+  },
+  {
+    "url": "http://placekitten.com/200/300",
+    "caption": "CoolCat",
+    "price": "$2000"
+  },
+  {
+    "url": "http://placekitten.com/200/300",
+    "caption": "HessCat",
+    "price": "$20000"
+  },
+  {
+    "url": "http://placekitten.com/200/300",
+    "caption": "Cat5",
+    "price": "$2"
+  },
+  {
+    "url": "http://placekitten.com/200/300",
+    "caption": "SadCat",
+    "price": "$200"
+  },
+  {
+    "url": "http://placekitten.com/200/300",
+    "caption": "FatCat",
+    "price": "$400"
+  },
+  {
+    "url": "http://placekitten.com/200/300",
+    "caption": "CatCat",
+    "price": "$200200"
+  },
+  {
+    "url": "http://placekitten.com/200/300",
+    "caption": "Who",
+    "price": "?"
+  }
+]

@@ -2,9 +2,13 @@ var path = require('path');
 var express = require('express');
 var bodyParser = require('body-parser');
 var userData = require('./userData');
+var exphbs = require('express-handlebars');
 
 var app = express();
 var port = process.env.PORT || 3000;
+
+app.engine('handlebars', exphbs({ defaultLayout: null}));
+app.set('view engine', 'handlebars');
 
 var userNum = -1;
 
@@ -19,6 +23,7 @@ app.get('/landing.html', function (req, res, next) {
     res.status(200).sendFile(path.join(__dirname, 'public', 'landing.html'));
 });
 
+/*
 app.get('/checking/:credentials', function (req, res, next) {
     userNum = -1;
     var creds = req.params.credentials;
@@ -36,6 +41,22 @@ app.get('/checking/:credentials', function (req, res, next) {
     } else {
 	res.status(200).sendFile(path.join(__dirname, 'public', 'mainShop.html'));
     }
+});
+*/
+
+app.get('/mainShop.html', function(req, res, next) {
+    console.log("enter main shop go");
+    res.render('shopPage', {message: "Welcome to the main shop"});
+});
+
+app.get('/stickers.html', function(req, res, next) {
+    console.log("enter stickers shop");
+    res.render('shopPage', {message: "enter stickers shop"});
+});
+
+app.get('/clothes.html', function(req, res, next) {
+    console.log("enter clothes shop");
+    res.render('shopPage', {message: "enter clothes shop"});
 });
 
 app.post('/login', function(req,res) {

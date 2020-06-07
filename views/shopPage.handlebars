@@ -35,6 +35,9 @@
     <main class="item-container">
       
       {{> shopItem url="http://placekitten.com/200/300" caption="This is a cat" price="$100"}}
+      {{#each shopList}}
+        {{> shopItem}}
+      {{/each}}
       <!--  Add the shop items here -->
 
     </main>

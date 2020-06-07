@@ -61,7 +61,7 @@ app.get('/clothes.html', function(req, res, next) {
 
 app.post('/login', function(req,res) {
     if(userData[req.body.name]){
-        res.status(200).sendFile(__dirname + '/public/mainShop.html');
+        res.status(200).render('shopPage', {message: "Welcome to the main shop"});
     }
     else{
         res.status(204).send("User Does Not Exist");

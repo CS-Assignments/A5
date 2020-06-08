@@ -12,7 +12,7 @@ var port = process.env.PORT || 3000;
 app.engine('handlebars', exphbs({ defaultLayout: null}));
 app.set('view engine', 'handlebars');
 
-var userNum = -1;
+var curUser = "";
 
 app.use(bodyParser.json());
 app.use(express.static('public'));
@@ -27,22 +27,26 @@ app.get('/landing.html', function (req, res, next) {
 
 app.get('/mainShop.html', function(req, res, next) {
     console.log("enter main shop go");
-    res.render('shopPage', {message: "Welcome to the main shop"});
+    if (curUser == "") {
+        curUser = "guest";
+    }
+    res.render('shopPage', {message: "Welcome to the home page"});
 });
 
 app.get('/stickers.html', function(req, res, next) {
     console.log("enter stickers shop");
-    res.render('shopPage', {message: "enter stickers shop"});
+    res.render('shopPage', {message: "Welcome to the stickers shop"});
 });
 
 app.get('/clothes.html', function(req, res, next) {
     console.log("enter clothes shop");
-    res.render('shopPage', {message: "enter clothes shop", shopList: clothesData});
+    res.render('shopPage', {message: "Welcome to the clothes shop", shopList: clothesData});
 });
 
 app.post('/login', function(req,res) {
     if(userData[req.body.name]){
-        res.status(200).render('shopPage', {message: "Welcome to the main shop"});
+        curUser = req.body.name;
+        res.status(200).render('shopPage', {message: "Welcome to the home page"});
     }
     else{
         res.status(204).send("User Does Not Exist");

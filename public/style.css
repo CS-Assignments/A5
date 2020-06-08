@@ -40,6 +40,7 @@ label {
 * CSS for mainShop and other pages
 */
 .item-container {
+  margin-top: 10px;
   margin-left: 75px;
   margin-right: 75px;
   display: flex;
@@ -51,6 +52,15 @@ label {
   width: 250px;
   padding: 10px;
   border: solid;
+}
+
+#title-message {
+  color: white;
+  text-align: center;
+  margin: 0px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: rgb(102, 102, 149);
 }
 
 a {
@@ -80,10 +90,12 @@ h1{
 
 .navbar{
   background-color: rgb(56, 56, 94);
+  height: 100px;
   padding: 2px;
 }
 
 .navlist{
+  padding-top: 10px;
   margin:2px;
 }
 
@@ -97,6 +109,7 @@ h1{
 .navbar-cart {
   float: right;
   margin-right: 20px;
+  padding-top: 15px;
 }
 
 .item-info {

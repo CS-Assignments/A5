@@ -30,23 +30,23 @@ app.get('/mainShop.html', function(req, res, next) {
     if (curUser == "") {
         curUser = "guest";
     }
-    res.render('shopPage', {message: "Welcome to the home page"});
+    res.render('shopPage', {message: "Welcome to the Home Page"});
 });
 
 app.get('/stickers.html', function(req, res, next) {
     console.log("enter stickers shop");
-    res.render('shopPage', {message: "Welcome to the stickers shop"});
+    res.render('shopPage', {message: "Stickers and School Supplies"});
 });
 
 app.get('/clothes.html', function(req, res, next) {
     console.log("enter clothes shop");
-    res.render('shopPage', {message: "Welcome to the clothes shop", shopList: clothesData});
+    res.render('shopPage', {message: "Clothes and Accessories", shopList: clothesData});
 });
 
 app.post('/login', function(req,res) {
     if(userData[req.body.name]){
         curUser = req.body.name;
-        res.status(200).render('shopPage', {message: "Welcome to the home page"});
+        res.status(200).render('shopPage', {message: "Welcome to the Home Page"});
     }
     else{
         res.status(204).send("User Does Not Exist");

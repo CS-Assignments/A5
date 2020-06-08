@@ -7,6 +7,8 @@ var userData = require('./userData');
 var clothesData = require('./clothes');
 var stickersData = require('./stickers');
 
+//console.log("user data", userData["Hello"].cart[0].likes);
+
 var app = express();
 var port = process.env.PORT || 3000;
 
@@ -20,6 +22,7 @@ var curUser = "guest";
 app.use(bodyParser.json());
 app.use(express.static('public'));
 
+//If the user enters in the root path then they will be sent to the landing page to login or continue as a guest
 app.get('/', function (req, res, next) {
     res.status(200).sendFile(path.join(__dirname, 'public', 'landing.html'));
 });
@@ -29,7 +32,7 @@ app.get('/landing.html', function (req, res, next) {
 });
 
 app.get('/mainShop.html', function(req, res, next) {
-    console.log("enter main shop go");
+    //console.log("enter main shop go");
     var randomArr = [];
 
     var randomSticker = Math.floor(Math.random() * (stickersData.length-1));
@@ -52,17 +55,27 @@ app.get('/mainShop.html', function(req, res, next) {
         randomArr.push(clothesData[randomClothe]);
         randomArr.push(clothesData[randomClothe-1]);
     }
-    res.render('shopPage', {message: "Welcome to the Home Page", shopList: randomArr});
+    res.status(200).render('shopPage', {message: "Welcome to the Home Page", shopList: randomArr});
 });
 
 app.get('/stickers.html', function(req, res, next) {
-    console.log("enter stickers shop");
-    res.render('shopPage', {message: "Stickers and School Supplies", shopList: stickersData});
+    //console.log("enter stickers shop");
+    res.status(200).render('shopPage', {message: "Stickers and School Supplies", shopList: stickersData});
 });
 
 app.get('/clothes.html', function(req, res, next) {
-    console.log("enter clothes shop");
-    res.render('shopPage', {message: "Clothes and Accessories", shopList: clothesData});
+    //console.log("enter clothes shop");
+    res.status(200).render('shopPage', {message: "Clothes and Accessories", shopList: clothesData});
+});
+
+//Want to change this to a post function so that if they try to view the cart when they are a guest it alerts them that they 
+//cant do that
+app.get('/viewCart', function(req, res, next) {
+    if(curUser == "guest") {
+        res.status(200).render('cartPage', {message: "Cart empty, guests cannot have a cart"})
+    } else {
+        res.status(200).render('cartPage', {message: (curUser + "'s cart"), cartItem: userData[curUser].cart})
+    }
 });
 
 //post request that checks if a user has data stored in memory aka the json file
@@ -76,8 +89,11 @@ app.post('/login', function(req,res) {
     }
 });
 
+//Decided to make a template for the cart page and for the 404 page. This is becuase they 
+//both don't use the navbar like the other sites so I decided it might be cleaner to comnine them 
+//This makes it so that there are less actual html pages to deal with for the server
 app.get('*', function (req, res) {
-    res.status(404).sendFile(path.join(__dirname, 'public', '404.html'));
+    res.status(404).render('cartPage', {message: "Error 404, could not find that page"});
 });
 
 app.listen(port, function () {

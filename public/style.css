@@ -37,6 +37,34 @@ label {
 }
 
 /*
+* CSS for the shopping cart and 404 page
+*/
+.header-trim {
+  background-color: rgb(56, 56, 94);
+  height: 100px;
+}
+
+.body-info-container {
+  display: flex;
+}
+
+.outter-trim {
+  background-color: rgb(56, 56, 94);
+  width: 75px;
+  height: 100vh;
+}
+
+.inner-trim {
+  background-color: rgb(102, 102, 149);
+  width: 50px;
+  height: 100vh;
+}
+
+.center-body-container {
+  width: 100%;
+}
+
+/*
 * CSS for mainShop and other pages
 */
 .item-container {

@@ -1,1 +1,14 @@
-
+[
+  {
+    "url": "http://placekitten.com/200/300",
+    "caption": "CSMajor2020",
+    "likes": 2020,
+    "price": "$200"
+  },
+  {
+    "url": "http://placekitten.com/200/300",
+    "caption": "COBMajor202",
+    "likes": 11,
+    "price": "$200"
+  }
+]

@@ -3,9 +3,13 @@
 		<img class="shop-item-image" src="{{url}}"/>
 	</div>
 	<div class="item-info">
-		<p class="item-caption">
-			<a href="#">{{caption}}</a>
-		</p>
+		<div class="item-info-sameline">
+			<p class="item-caption">
+				<a href="#">{{caption}}</a>
+			</p>
+			<i class="fa fa-heart like-button-heart"></i>
+			<p class="like-number">{{likes}}</p>
+		</div>
 		<p class="item-price">{{price}}</p>
 		<button type="button" class="item-like-button">Like</button>
 		<button type="button" class="item-addtocart-button">Add to cart</button>

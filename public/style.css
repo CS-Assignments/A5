@@ -41,10 +41,11 @@ label {
 */
 .item-container {
   margin-top: 10px;
-  margin-left: 120px;
+  margin-left: 75px;
   margin-right: 75px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .shop-item {
@@ -52,6 +53,21 @@ label {
   width: 250px;
   padding: 10px;
   border: solid;
+}
+
+.item-info-sameline {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+
+.item-caption {
+  margin-right: 20px;
+}
+
+.like-button-heart {
+  padding-top: 18px;
+  margin-right: 5px;
 }
 
 #title-message {

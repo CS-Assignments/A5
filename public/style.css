@@ -43,6 +43,8 @@ label {
   margin-top: 10px;
   margin-left: 75px;
   margin-right: 75px;
+//  margin-left: auto;
+//  margin-right: auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -53,6 +55,14 @@ label {
   width: 250px;
   padding: 10px;
   border: solid;
+}
+
+.shop-item-image {
+  max-width: 200px;
+  max-height: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .item-info-sameline {
@@ -68,6 +78,11 @@ label {
 .like-button-heart {
   padding-top: 18px;
   margin-right: 5px;
+  text-align: right;
+}
+
+.like-number{
+  float: right;
 }
 
 #title-message {

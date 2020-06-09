@@ -122,6 +122,18 @@ label {
   background-color: rgb(102, 102, 149);
 }
 
+.top-footer {
+  color: white;
+  width: 150px;
+  margin: auto;
+  border: 2px solid rgb(56, 56, 94);
+background-color: rgb(102, 102, 149);
+}
+
+.top-footer a {
+  color: white;
+}
+
 p.top-footer {
   text-align: center;
 }

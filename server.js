@@ -82,11 +82,41 @@ app.get('/viewCart', function(req, res, next) {
 app.post('/login', function(req,res) {
     if(userData[req.body.name]){
         curUser = req.body.name;
-        res.status(200).render('shopPage', {message: "Welcome to the Home Page"});
+        res.status(200).send("User Exists");
     }
     else{
         res.status(204).send("User Does Not Exist");
     }
+});
+
+app.post('/likeItem/:site/:index', function(req,res) {
+    var itemIndex = req.params.index;
+    var siteName = req.params.site;
+
+    if (siteName == "stickers") {
+        stickersData[itemIndex].likes += 1;
+        console.log("item likes", stickersData[itemIndex].likes);
+    } else if (siteName == "clothes") {
+        clothesData[itemIndex].likes += 1;
+        console.log("like clothes item");
+    } else {
+        console.log("can't like items from the home page");
+    }
+
+});
+
+app.post('/addItem/:site/:index', function(req,res) {
+    var itemIndex = req.params.index;
+    var siteName = req.params.site;
+
+    if (siteName == "stickers") {
+        userData[curUser].cart.push(stickersData[itemIndex]);
+    } else if (siteName == "clothes") {
+        userData[curUser].cart.push(clothesData[itemIndex]);
+    } else {
+        console.log("can't add items from the home page");
+    }
+
 });
 
 //Decided to make a template for the cart page and for the 404 page. This is becuase they 

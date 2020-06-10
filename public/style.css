@@ -64,6 +64,10 @@ label {
   width: 100%;
 }
 
+.total-cost {
+  text-align: center;
+}
+
 /*
 * CSS for mainShop and other pages
 */

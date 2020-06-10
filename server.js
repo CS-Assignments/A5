@@ -74,7 +74,15 @@ app.get('/viewCart', function(req, res, next) {
     if(curUser == "guest") {
         res.status(200).render('cartPage', {message: "Cart empty, guests cannot have a cart"})
     } else {
-        res.status(200).render('cartPage', {message: (curUser + "'s cart"), cartItem: userData[curUser].cart})
+        var runningTotal = 0;
+        for (i = 0; i < userData[curUser].cart.length; i++) {
+            var costStr = userData[curUser].cart[i].price;
+            //costStr.replace('$', ' ');
+            //console.log("cost", costStr);
+            runningTotal += parseFloat(costStr.substring(1));
+        }
+        runningTotal = runningTotal.toFixed(2);
+        res.status(200).render('cartPage', {message: (curUser + "'s cart"), cartItem: userData[curUser].cart, totalCost: ("Your total cost is $" + runningTotal)});
     }
 });
 

@@ -109,14 +109,17 @@ app.post('/addItem/:site/:index', function(req,res) {
     var itemIndex = req.params.index;
     var siteName = req.params.site;
 
-    if (siteName == "stickers") {
-        userData[curUser].cart.push(stickersData[itemIndex]);
-    } else if (siteName == "clothes") {
-        userData[curUser].cart.push(clothesData[itemIndex]);
+    if (curUser != "guest") {
+        if (siteName == "stickers") {
+            userData[curUser].cart.push(stickersData[itemIndex]);
+        } else if (siteName == "clothes") {
+            userData[curUser].cart.push(clothesData[itemIndex]);
+        } else {
+            console.log("can't add items from the home page");
+        }
     } else {
-        console.log("can't add items from the home page");
+        console.log("guests can't add items to their cart")
     }
-
 });
 
 //Decided to make a template for the cart page and for the 404 page. This is becuase they 

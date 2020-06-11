@@ -103,12 +103,11 @@ app.post('/likeItem/:site/:index', function(req,res) {
 
     if (siteName == "stickers") {
         stickersData[itemIndex].likes += 1;
-        console.log("item likes", stickersData[itemIndex].likes);
     } else if (siteName == "clothes") {
         clothesData[itemIndex].likes += 1;
-        console.log("like clothes item");
     } else {
-        console.log("can't like items from the home page");
+        //console.log("can't like items from the home page");
+        res.status(400).send("Can't like item from home page");
     }
 
 });
@@ -123,10 +122,12 @@ app.post('/addItem/:site/:index', function(req,res) {
         } else if (siteName == "clothes") {
             userData[curUser].cart.push(clothesData[itemIndex]);
         } else {
-            console.log("can't add items from the home page");
+            //console.log("can't add items from the home page");
+            res.status(400).send("Can't like item from home page");
         }
     } else {
-        console.log("guests can't add items to their cart")
+        //console.log("guests can't add items to their cart")
+        res.status(401).send("Can't like item from home page");
     }
 });
 

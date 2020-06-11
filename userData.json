@@ -6,12 +6,6 @@
 				"caption": "If In Doubt Sticker",
 				"likes": 2020,	
 				"price": "$2.05"
-			},
-			{
-				"url": "http://placekitten.com/200/300",
-    			"caption": "CSMajor2020",
-   				"likes": 200,
-    			"price": "$200"
 			}
 		]
 	},
@@ -25,7 +19,7 @@
 				"price": "$2.05"
 			}, 
 			{
-				"url": "http://placekitten.com/200/300",
+				"url": "https://ih1.redbubble.net/image.555012028.2393/st,small,507x507-pad,600x600,f8f8f8.u2.jpg",
     			"caption": "FatCat",
     			"likes": 19403,
     			"price": "$400"

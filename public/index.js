@@ -30,6 +30,12 @@ for (i = 0; i < likeButton.length; i++) {
 				'text/plain'
 			);
 
+			request.addEventListener('load', function (event) {
+		    	if (event.target.status === 400) {
+		    		alert("Cannot like items from the home page");
+				}
+			});
+
 			request.send();
 		})
 	})(i);
@@ -52,6 +58,14 @@ for (i = 0; i < likeButton.length; i++) {
 				'Content-Type',
 				'text/plain'
 			);
+
+			request.addEventListener('load', function (event) {
+		    	if (event.target.status === 400) {
+		    		alert("Cannot add items to your cart from the home page");
+				} else if (event.target.status == 401) {
+					alert("Guests can't add items to their cart");
+				}
+			});
 
 			request.send();
 		})

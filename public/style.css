@@ -9,8 +9,19 @@ body{
 
 div.head-info {
   text-align: center;
-  margin-top: 150px;
   font-family: verdana;
+  color: white;
+  background-color: rgb(56, 56, 94);
+
+}
+
+.fa-star {
+  color: black;
+}
+
+div.login-prompt {
+  margin: auto;
+  background-color: rgb(102, 102, 149);
 }
 
 div.head-title {
@@ -20,6 +31,7 @@ div.head-title {
 label {
   font-family: verdana;
 }
+
 
 #login-username-input {
   resize: none;

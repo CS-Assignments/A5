@@ -103,8 +103,10 @@ app.post('/likeItem/:site/:index', function(req,res) {
 
     if (siteName == "stickers") {
         stickersData[itemIndex].likes += 1;
+        res.status(200).send();
     } else if (siteName == "clothes") {
         clothesData[itemIndex].likes += 1;
+        res.status(200).send();
     } else {
         //console.log("can't like items from the home page");
         res.status(400).send("Can't like item from home page");

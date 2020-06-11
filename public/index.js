@@ -6,13 +6,14 @@ function viewCart() {
 }
 
 var likeButton = document.getElementsByClassName("item-like-button");
+var likeText = document.getElementsByClassName("like-number");
 var addToCartButton = document.getElementsByClassName("item-addtocart-button");
 var viewCartButton = document.getElementById("navbar-shopping-cart-button");
 
 viewCartButton.addEventListener("click", viewCart);
 
 for (i = 0; i < likeButton.length; i++) {
-	(function(index) {// This function is used to check which like button is clicked so item can be propperly updated
+	(function(index) {// This function is used to check which like button is clicked so item can be properly updated
 		likeButton[index].addEventListener("click", function() {
 			console.log("location", location.pathname);
 			var request = new XMLHttpRequest();
@@ -33,6 +34,11 @@ for (i = 0; i < likeButton.length; i++) {
 			request.addEventListener('load', function (event) {
 		    	if (event.target.status === 400) {
 		    		alert("Cannot like items from the home page");
+				}
+				else if(event.target.status === 200){
+					var likes = parseInt(likeText[index].textContent);
+					console.log("numlikes-", likes);
+					likeText[index].textContent = likes+1;
 				}
 			});
 

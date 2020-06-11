@@ -8,14 +8,14 @@ templates['shopItem'] = template({"compiler":[8,">= 4.3.0"],"main":function(cont
         return undefined
     };
 
-  return "<section class=\"shop-item\">\r\n	<div class=\"image-container\">\r\n		<img class=\"shop-item-image\" src=\""
+  return "<section class=\"shop-item\">\n	<div class=\"image-container\">\n		<img class=\"shop-item-image\" src=\""
     + alias4(((helper = (helper = lookupProperty(helpers,"url") || (depth0 != null ? lookupProperty(depth0,"url") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"url","hash":{},"data":data,"loc":{"start":{"line":3,"column":36},"end":{"line":3,"column":43}}}) : helper)))
-    + "\"/>\r\n	</div>\r\n	<div class=\"item-info\">\r\n		<div class=\"item-info-sameline\">\r\n			<p class=\"item-caption\">\r\n				<a href=\"#\">"
+    + "\"/>\n	</div>\n	<div class=\"item-info\">\n		<div class=\"item-info-sameline\">\n			<p class=\"item-caption\">\n				<a href=\"#\">"
     + alias4(((helper = (helper = lookupProperty(helpers,"caption") || (depth0 != null ? lookupProperty(depth0,"caption") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"caption","hash":{},"data":data,"loc":{"start":{"line":8,"column":16},"end":{"line":8,"column":27}}}) : helper)))
-    + "</a>\r\n			</p>\r\n			<i class=\"fa fa-heart like-button-heart\"></i>\r\n			<p class=\"like-number\">"
+    + "</a>\n			</p>\n			<i class=\"fa fa-heart like-button-heart\"></i>\n			<p class=\"like-number\">"
     + alias4(((helper = (helper = lookupProperty(helpers,"likes") || (depth0 != null ? lookupProperty(depth0,"likes") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"likes","hash":{},"data":data,"loc":{"start":{"line":11,"column":26},"end":{"line":11,"column":35}}}) : helper)))
-    + "</p>\r\n		</div>\r\n		<p class=\"item-price\">"
+    + "</p>\n		</div>\n		<p class=\"item-price\">"
     + alias4(((helper = (helper = lookupProperty(helpers,"price") || (depth0 != null ? lookupProperty(depth0,"price") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"price","hash":{},"data":data,"loc":{"start":{"line":13,"column":24},"end":{"line":13,"column":33}}}) : helper)))
-    + "</p>\r\n		<button type=\"button\" class=\"item-like-button\">Like</button>\r\n		<button type=\"button\" class=\"item-addtocart-button\">Add to cart</button>\r\n	</div>	\r\n</section>";
+    + "</p>\n		<button type=\"button\" class=\"item-like-button\">Like</button>\n		<button type=\"button\" class=\"item-addtocart-button\">Add to cart</button>\n	</div>	\n</section>";
 },"useData":true});
 })();

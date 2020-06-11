@@ -24,10 +24,12 @@ app.use(express.static('public'));
 
 //If the user enters in the root path then they will be sent to the landing page to login or continue as a guest
 app.get('/', function (req, res, next) {
+    curUser = "guest";
     res.status(200).sendFile(path.join(__dirname, 'public', 'landing.html'));
 });
 
 app.get('/landing.html', function (req, res, next) {
+    curUser = "guest";
     res.status(200).sendFile(path.join(__dirname, 'public', 'landing.html'));
 });
 
@@ -60,12 +62,12 @@ app.get('/mainShop.html', function(req, res, next) {
 
 app.get('/stickers.html', function(req, res, next) {
     //console.log("enter stickers shop");
-    res.status(200).render('shopPage', {message: "Stickers and School Supplies", shopList: stickersData});
+    res.status(200).render('shopPage', {message: "Stickers", shopList: stickersData});
 });
 
 app.get('/clothes.html', function(req, res, next) {
     //console.log("enter clothes shop");
-    res.status(200).render('shopPage', {message: "Clothes and Accessories", shopList: clothesData});
+    res.status(200).render('shopPage', {message: "Clothes", shopList: clothesData});
 });
 
 //Want to change this to a post function so that if they try to view the cart when they are a guest it alerts them that they 

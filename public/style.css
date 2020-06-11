@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 /*
 * CSS for Landing Page
 */
@@ -99,8 +99,10 @@ label {
   margin: 10px;
   width: 250px;
   padding: 10px;
+  background-color: #F8F8F8;
   border: solid;
   border-color: rgb(102, 102, 149);
+  border-radius: 8px;
 }
 
 .shop-item-image {
@@ -114,11 +116,13 @@ label {
 .item-info-sameline {
   display: flex;
   flex-wrap: wrap;
+  padding: 4px;
   align-content: space-between;
 }
 
 .item-caption {
-  margin-right: 20px;
+  margin: auto;
+  padding: 4px;
 }
 
 .like-button-heart {
@@ -129,6 +133,41 @@ label {
 
 .like-number{
   float: right;
+  margin-right: 5px;
+  margin-left: auto;
+}
+
+.item-price{
+  font-weight: 500;
+}
+
+.item-addtocart-button{
+  color: #F8F8F8;
+  background-color: #666695;
+  width: 65%;
+  border: 1px black solid;
+  border-radius: 6px;
+  font-size: 14px;
+  padding: 8px;
+}
+
+.item-addtocart-button:hover{
+  background-color: #38385E;
+  cursor: pointer;
+}
+
+.item-like-button{
+  border: 1px black solid;
+  border-radius: 6px;
+  width: 30%;
+  font-size: 14px;
+  padding: 8px;
+  margin-left: auto;
+}
+
+.item-like-button:hover{
+  background-color: #d6d6d6;
+  cursor: pointer;
 }
 
 #title-message {
@@ -206,7 +245,7 @@ h1{
 }
 
 .item-info {
-  /* font-family: verdana; */
+  margin: auto 20px;
 }
 
 /*

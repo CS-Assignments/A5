@@ -43,9 +43,65 @@ label {
 
 #login-modal {
   margin: auto;
-  border: solid;
-  width: 200px;
-  padding: 10px;
+  border: solid #666695;
+  border-radius: 8px;
+  width: 300px;
+  padding: 12px;
+  margin: 100px auto;
+}
+
+#login-username-input{
+  border-radius: 6px;
+  border: 1px black solid;
+  width: 100%;
+  height: 40px;
+  padding: 0;
+  margin-bottom: 6px;
+  font-size: 16px;
+}
+
+#login-password-input{
+  border-radius: 6px;
+  border: 1px black solid;
+  width: 100%;
+  height: 40px;
+  padding: 0;
+  font-size: 16px;
+}
+
+.login-body{
+  margin: 0;
+}
+
+.login-continue-button{
+  color: #F8F8F8;
+  background-color: #666695;
+  border: 1px black solid;
+  width: 100%;
+  margin: 4px auto;
+  border-radius: 6px;
+  font-size: 14px;
+  padding: 8px;
+}
+
+.login-continue-button:hover{
+  background-color: #38385E;
+  cursor: pointer;
+}
+
+.login-guest-button{
+  border: 1px black solid;
+  border-radius: 6px;
+  font-size: 14px;
+  width: 100%;
+  font-size: 14px;
+  padding: 8px;
+  margin-left: auto;
+}
+
+.login-guest-button:hover{
+  background-color: #d6d6d6;
+  cursor: pointer;
 }
 
 /*
